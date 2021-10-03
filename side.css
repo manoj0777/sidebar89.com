@@ -1,0 +1,135 @@
+
+
+::after,::before{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: orange; 
+   
+}
+img{
+    justify-content: center;
+    height:100px;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+.sidebar-toggle{
+    position:fixed;
+    top:32px;
+    right:45px;
+    font-size:32px;
+    background:transparent;
+    border-color:transparent;
+    color:hsl(210, 22%, 49%);
+    transition:all 0.3s linear;
+    cursor:pointer;
+    animation:bounce 2s ease-in-out infinite;
+}
+
+.sidebar-toggle:hover{
+    color: hsl(211, 27%, 70%);
+}
+
+@keyframes bounce {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+
+    }
+    
+}
+
+.sidebar-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 16px 20px;
+}
+
+.close-btn{
+    font-size: 26px;
+    background:transparent;
+    border-color:transparent;
+    color:rgb(200, 240, 25);
+    transition: all 0.3s linear;
+    cursor:pointer;
+   
+
+}
+.close-btn:hover{
+    color:lightslategrey;
+    transform: rotate(360deg);
+}
+
+.links a{
+    display:block;
+    font-size:25px;
+    text-transform:capitalize;
+    padding: 16px 25px;
+
+}
+
+.links a:hover{
+    background:hsl(210, 31%, 80%);
+    color:bisque;
+    padding-left: 16px;
+}
+
+.social-icons{
+    justify-self:center;
+    display:flex;
+    padding-bottom: 20px;
+
+}
+
+.social-icons a{
+    font-size:30px;
+    margin:0 8px;
+    color:hsl(210, 22%, 49%); 
+    transition: all 0.3s linear;
+}
+
+.social-icons a:hover {
+  color:orange;
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap:1rem;
+    box-shadow:darkgoldenrod;
+    transition: all 0.3s linear;
+    transform:translate(-100%);
+
+}
+.show-sidebar{
+    transform: translate(0);
+}
+
+@media screen and (min-width:676px)
+{
+    .sidebar{
+        width:400px;
+    }
+}
